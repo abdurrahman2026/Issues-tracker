@@ -1,27 +1,24 @@
-const singBtn = document.getElementById("btn-signIn");
+const signBtn = document.getElementById("btn-signIn");
 
-singBtn.addEventListener('click', (event) => {
+signBtn.addEventListener("click", function (event) {
+  event.preventDefault();
 
-    event.preventDefault()
+  const userNameField = document.getElementById("signIn-userName");
+  const userPasswordField = document.getElementById("signIn-password");
 
-    const userNameField = document.getElementById("signIn-userName");
-    const userPasswordField = document.getElementById("signIn-password");
+  const userValue = userNameField.value.trim();
+  const passwordValue = userPasswordField.value.trim();
 
-    const userValue = userNameField.value.trim();
-    const passwordValue = userPasswordField.value.trim();
+  if (userValue !== "admin") {
+    alert("Invalid username!");
+    return;
+  }
 
-    if(userValue !== "admin"){
-        alert('Invalid userName! please try again')
-        return
-    }
+  if (passwordValue !== "admin123") {
+    alert("Invalid password!");
+    return;
+  }
 
-    // check password
-    if (passwordValue !== "admin123") {
-      alert("Invaild password! please try again");
-      return;
-    }
-
-    alert('Login Succesefull!')
-
-    window.location.href = 'home.html';
+  // Login successful → redirect to main.html
+  window.location.href = "./main.html";
 });
