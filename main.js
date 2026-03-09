@@ -15,7 +15,7 @@ const apiCard = () => {
 };
 
 
-// Generates dynamic HTML cards and updates the total issue counter.
+//  dynamic HTML cards and updates the total issue counter.
 const serverData = (recevedData) => {
 
     const totalCountElement = document.getElementById("total-issue-count");
@@ -66,8 +66,7 @@ const serverData = (recevedData) => {
   });
 };
 
-
-// Filtering Logic
+// Filtering Logic ?? 
 const filterByStatus = (status) => {
   const filteredIssues =
     status === "all" ? allIssues : allIssues.filter((item) => item.status === status);
