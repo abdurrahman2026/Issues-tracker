@@ -15,7 +15,7 @@ signBtn.addEventListener("click", function (event) {
   }
 
   if (passwordValue !== "admin123") {
-    alert("Invalid password!");
+    alert("InvaLid password!");
     return;
   }
 
